@@ -3,11 +3,8 @@ package StepDefinition;
 import Hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
-import io.cucumber.java.eo.Se;
 import pageobjects.SearchPage;
 import io.cucumber.java.en.Given;
-
-import java.security.PrivateKey;
 
 public class SearchPageStepDefintion {
 
