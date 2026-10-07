@@ -1,6 +1,7 @@
 package StepDefinition;
 
 import Hooks.Hooks;
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import pageobjects.SearchPage;
@@ -22,7 +23,25 @@ public void user_is_on_theHomepage() {
 }
 @And("selects {string} as the check-in date")
    public void User_selects_checking_date(String checkindate){
-
-    searchPage.selectCheckinDate();
+    searchPage.selectCheckinDate(checkindate);
 }
+@And ("selects {string} as the check-out date")
+    public void user_selects_checkout_date(String checkoutdate){
+searchPage.selectCheckoutDate(checkoutdate);
+}
+@And("selects {string} as the number of guests")
+    public void user_selects_number_of_guests( String numberofguests){
+    int guestCount = Integer.parseInt(numberofguests);
+    searchPage.select_numberof_guests(guestCount);
+}
+@And("selects {string} as the number of rooms")
+public void user_selects_number_of_rooms(String numberofrooms){
+    int roomCount = Integer.parseInt(numberofrooms);
+    searchPage.select_numberof_rooms(roomCount);
+}
+
+    @And("clicks on the search button")
+    public void clicksOnTheSearchButton() {
+    searchPage.clickSearchButton();
+    }
 }

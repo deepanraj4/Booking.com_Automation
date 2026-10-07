@@ -6,11 +6,12 @@ Feature: Search for accommodations
     Given the user is on the homepage
    # And the user is on the search page
     When the user enters "<location>" in the search bar
-    And selects "<check-in-date>" as the check-in date
-    #And selects "<check-out-date>" as the check-out date
-    #And selects "<number-of-guests>" as the number of guests
-    #And clicks on the search button
+    And selects "<checkindate>" as the check-in date
+    And selects "<checkoutdate>" as the check-out date
+    And selects "<numberofguest>" as the number of guests
+    And selects "<numberofrooms>" as the number of rooms
+    And clicks on the search button
    # Then the user should see a list of available accommodations in "<location>"
     Examples:
-      | location | check-in-date | check-out-date | number-of-guests |
-    |Ooty|2023-10-01|2023-10-05|5|
+      | location | checkindate | checkoutdate | numberofguest |numberofrooms|
+    |Ooty|2026-11-05|2026-11-07|3|2|
