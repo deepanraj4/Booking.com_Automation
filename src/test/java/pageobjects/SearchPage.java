@@ -50,6 +50,7 @@ public class SearchPage extends BaseClass {
 
         try {
             WebElement searchbox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(SEARCH_BOX)));
+          // WebElement searchbox = driver.findElement(By.xpath(SEARCH_BOX));
             searchbox.clear();
             searchbox.sendKeys(location);
         } catch (Exception e) {
