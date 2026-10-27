@@ -13,5 +13,5 @@ Feature: Search for accommodations
     And clicks on the search button
    # Then the user should see a list of available accommodations in "<location>"
     Examples:
-      | location | checkindate | checkoutdate | numberofguest |numberofrooms|
+      |location | checkindate | checkoutdate | numberofguest |numberofrooms
     |Ooty|2026-11-05|2026-11-07|3|2|

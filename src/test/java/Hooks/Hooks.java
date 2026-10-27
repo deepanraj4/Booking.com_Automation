@@ -5,6 +5,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 
@@ -17,6 +18,7 @@ public class Hooks {
     public void setup(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        driver = new EdgeDriver();
         driver.manage().window().maximize();
     }
    @After
